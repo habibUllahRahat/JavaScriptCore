@@ -69,7 +69,7 @@ b = prompt("Please input your age..");
 if (b < a) {
     console.warn("You're underage. So, you can't Drink Alcohol");
 } else {
-    alert("Congrats, You're allowed to drink Alcohol choose one please..");
+    alert("Congrats, You're allowed to drink Alcohol choose one please..");}
     // b = prompt("Choose a number please..\n1.Rum\n2.Whiskey\n3.Vodka\n4.Beer\n5.Cola");
 
     // if (b == 1) {
