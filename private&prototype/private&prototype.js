@@ -150,10 +150,6 @@ Car.prototype.getAge = function() {
     document.write(this.model + ' Model Car is released at ' + this.year + ' and it has been ' + (pyear - this.year) + " in service<br>")
 }
 
-function conn(child, parent) {
-    child.prototype = Object.create(parent.prototype);
-    child.prototype.constructor = child;
-}
 
 function Toyota(model, releasedYear) {
     Car.call(this, model, releasedYear);
@@ -176,9 +172,14 @@ function Ferrari(model, releasedYear) {
     this.type = 'Hyper Racing (Jet Fuel)';
 }
 
-conn(Toyota, Car);
-conn(Tesla, Car);
-conn(Ferrari, Car);
+function connectTowObjectProto(child, parent) {
+    child.prototype = Object.create(parent.prototype);
+    child.prototype.constructor = child;
+}
+
+connectTowObjectProto(Toyota, Car);
+connectTowObjectProto(Tesla, Car);
+connectTowObjectProto(Ferrari, Car);
 
 var prado = new Toyota('Prado (TXD)', 2016);
 var sModel = new Tesla('S-Model 3(Basic)', 2020);
