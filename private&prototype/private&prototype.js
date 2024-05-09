@@ -174,7 +174,7 @@ function Ferrari(model, releasedYear) {
 
 function connectTowObjectProto(child, parent) {
     child.prototype = Object.create(parent.prototype);
-    child.prototype.constructor = child;
+    child.prototype.constructor = child;//Because we connected the child prototype to the parent prototype so its constructor became part of Parent so we are re assinging the child constructor so that constructors name are not changing
 }
 
 connectTowObjectProto(Toyota, Car);
