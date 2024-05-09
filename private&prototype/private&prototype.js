@@ -128,7 +128,7 @@ Child.prototype = Object.create(Parent.prototype); // must be connect before dec
 var child1 = new Child();
 console.log(child1.a);
 console.log(child1.b);
-console.log(child1.z); //this will show undefiend if we didn't linked Child.prototype object to the Parent.prototype
+console.log(child1.z); //this will be inherited from Parent Object 
 
 //practicesone super object two sub object
 
