@@ -118,6 +118,11 @@ var Parent = function() {
 }
 Parent.prototype.z = 40;
 
+var parentsObj=new Parent()
+console.log(parentsObj)
+console.log(parentsObj.a)
+console.log(parentsObj.z)
+
 var Child = function() {
     Parent.call(this); //this line will link Parent object but no Parent.prototype object
     this.b = 30;
